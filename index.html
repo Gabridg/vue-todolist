@@ -21,11 +21,12 @@
         </header>
         <main class="w-50 mx-auto">
             <ul class="list-group">
-                <li v-for="(task, i) in tasks" class="list-group-item">
+                <li v-for="(task, i) in tasks" class="list-group-item d-flex justify-content-between">
                     <p v-if="task.isDone">
                         <del>{{task.text}}</del>
                     </p>
                     <p v-else>{{task.text}}</p>
+                    <button type="button" class="btn-close" @click="deleteTask"></button>
                 </li>
             </ul>
         </main>

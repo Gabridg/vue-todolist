@@ -21,6 +21,7 @@ Buon lavoro e buon divertimento!
 `
 */
 
+
 const app = new Vue({
     el: '#root',
     data: {
@@ -39,5 +40,9 @@ const app = new Vue({
             }
         ],
     },
-
+    methods: {
+        deleteTask(index) {
+            this.tasks.splice(index, 1);
+        }
+    }
 })
