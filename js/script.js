@@ -49,7 +49,8 @@ const app = new Vue({
             this.tasks.splice(index, 1);
         },
         addTask() {
-            this.tasks.push(this.newTask)
+            this.tasks.push(this.newTask);
+            this.newTask = '';
         }
     }
 })
