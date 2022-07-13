@@ -14,9 +14,24 @@
 </head>
 
 <body>
+    <div id="root">
+
+        <header>
+            <h1 class="text-center fw-bold my-5">ToDo List</h1>
+        </header>
+        <main class="w-50 mx-auto">
+            <ul class="list-group">
+                <li v-for="(task, i) in tasks" class="list-group-item">
+                    <p v-if="task.isDone">
+                        <del>{{task.text}}</del>
+                    </p>
+                    <p v-else>{{task.text}}</p>
+                </li>
+            </ul>
+        </main>
 
 
-
+    </div>
     <script src="js/script.js"></script>
 </body>
 

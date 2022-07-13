@@ -18,4 +18,26 @@ Bonus:
 1- oltre al click sul pulsante, intercettare anche il tasto ENTER per aggiungere il todo alla lista
 2- cliccando sul testo dell'item, invertire il valore della proprietà done del todo corrispondente (se done era uguale a false, impostare true e viceversa)
 Buon lavoro e buon divertimento!
+`
 */
+
+const app = new Vue({
+    el: '#root',
+    data: {
+        tasks: [
+            {
+                text: "Fare la spesa",
+                isDone: false,
+            },
+            {
+                text: "Completare l' esercizio",
+                isDone: true,
+            },
+            {
+                text: "Fare i bonus",
+                isDone: false,
+            }
+        ],
+    },
+
+})
