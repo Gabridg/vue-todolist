@@ -25,10 +25,7 @@ Buon lavoro e buon divertimento!
 const app = new Vue({
     el: '#root',
     data: {
-        newTask: {
-            text: "",
-            isDone: false,
-        },
+        newTask: '',
         tasks: [
             {
                 text: "Fare la spesa",
@@ -49,8 +46,11 @@ const app = new Vue({
             this.tasks.splice(index, 1);
         },
         addTask() {
-            this.tasks.push(this.newTask);
-            this.newTask = '';
+            if (this.newTask) {
+                const newObj = { text: this.newTask, isDone: false };
+                this.tasks.push(newObj);
+                this.newTask = '';
+            }
         }
     }
 })
